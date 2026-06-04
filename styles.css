@@ -170,6 +170,8 @@ header .container {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    max-width: 100%;
+    padding: 0 4%;
 }
 
 .logo {
@@ -191,7 +193,7 @@ header .container {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.2rem;
 }
 
 .nav-link {
@@ -1020,6 +1022,11 @@ header .container {
 
 .project-links a {
     color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
 }
 
 .project-links a:hover {
@@ -1551,7 +1558,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .nav-toggle {
         display: flex;
     }
@@ -1575,7 +1582,9 @@ footer {
     .nav-menu.active {
         right: 0;
     }
-    
+}
+
+@media (max-width: 768px) {
     .home-title {
         font-size: 2.8rem;
     }
