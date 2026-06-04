@@ -534,9 +534,8 @@ header .container {
 
 /* About Section */
 .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-info {
@@ -551,119 +550,9 @@ header .container {
     line-height: 1.7;
 }
 
-.personal-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-    margin-top: 1rem;
-}
 
-.detail-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
 
-.detail-label {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-}
 
-.detail-value {
-    font-size: 1rem;
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-/* Skills Layout */
-.skills-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.skills-tabs {
-    display: flex;
-    gap: 0.75rem;
-    border-bottom: 1px solid rgba(59, 130, 246, 0.15);
-    padding-bottom: 0.75rem;
-    overflow-x: auto;
-}
-
-.skill-tab-btn {
-    background: transparent;
-    border: none;
-    color: var(--text-secondary);
-    padding: 0.5rem 1rem;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    cursor: pointer;
-    border-radius: 6px;
-    white-space: nowrap;
-    transition: var(--transition);
-}
-
-.skill-tab-btn:hover {
-    color: var(--primary);
-    background: rgba(0, 210, 255, 0.05);
-}
-
-.skill-tab-btn.active {
-    color: var(--primary);
-    background: rgba(0, 210, 255, 0.1);
-    box-shadow: 0 0 10px rgba(0, 210, 255, 0.1);
-}
-
-.skills-panel {
-    display: none;
-    flex-direction: column;
-    gap: 1.25rem;
-    animation: fadeIn 0.4s ease;
-}
-
-.skills-panel.active {
-    display: flex;
-}
-
-.skill-bar-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.skill-bar-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.95rem;
-    font-weight: 500;
-}
-
-.skill-bar-name {
-    color: var(--text-primary);
-}
-
-.skill-bar-percentage {
-    font-family: var(--font-mono);
-    color: var(--primary);
-}
-
-.skill-bar-outer {
-    height: 6px;
-    background: rgba(59, 130, 246, 0.15);
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.skill-bar-inner {
-    height: 100%;
-    background: linear-gradient(90deg, var(--secondary), var(--primary));
-    border-radius: 3px;
-    width: 0;
-    transition: width 1s cubic-bezier(0.1, 0.8, 0.25, 1);
-    box-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
-}
 
 /* Timeline (Education) */
 .timeline {
@@ -1000,7 +889,7 @@ header .container {
 
 .project-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 1.25rem;
 }
@@ -1051,6 +940,22 @@ header .container {
     padding: 0.25rem 0.6rem;
     border-radius: 4px;
     border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.project-view-btn {
+    margin-top: 1.5rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+}
+
+.project-view-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: var(--text-muted);
+    color: var(--text-muted);
 }
 
 

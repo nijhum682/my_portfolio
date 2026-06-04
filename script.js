@@ -85,39 +85,40 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typingSpan) {
         const roles = [
             "CSE Undergrad at KUET",
-            "Software Developer",
-            "Competitive Programmer",
+            "Web Developer",
+            "Desktop App Developer",
+            "Android App Developer",
             "Hardware & IoT Enthusiast"
         ];
         let roleIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-        let typingSpeed = 100;
+        let typingSpeed = 60;
 
         function typeEffect() {
             const currentRole = roles[roleIndex];
             if (isDeleting) {
                 typingSpan.textContent = currentRole.substring(0, charIndex - 1);
                 charIndex--;
-                typingSpeed = 50; // Delete faster
+                typingSpeed = 25; // Delete faster
             } else {
                 typingSpan.textContent = currentRole.substring(0, charIndex + 1);
                 charIndex++;
-                typingSpeed = 120; // Natural typing speed
+                typingSpeed = 60; // Natural typing speed
             }
 
             if (!isDeleting && charIndex === currentRole.length) {
                 isDeleting = true;
-                typingSpeed = 2000; // Pause at end of word
+                typingSpeed = 1000; // Pause at end of word
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 roleIndex = (roleIndex + 1) % roles.length;
-                typingSpeed = 500; // Pause before starting next word
+                typingSpeed = 300; // Pause before starting next word
             }
 
             setTimeout(typeEffect, typingSpeed);
         }
-        setTimeout(typeEffect, 1000);
+        setTimeout(typeEffect, 600);
     }
 
     // -------------------------------------------------------------
@@ -337,52 +338,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
-    // 5. Skills Grid Tab Switcher & Progress Animation
-    // -------------------------------------------------------------
-    const skillTabBtns = document.querySelectorAll('.skill-tab-btn');
-    const skillPanels = document.querySelectorAll('.skills-panel');
-
-    function animateSkillBars(panel) {
-        const bars = panel.querySelectorAll('.skill-bar-inner');
-        bars.forEach(bar => {
-            const targetWidth = bar.getAttribute('data-percent') + '%';
-            bar.style.width = targetWidth;
-        });
-    }
-
-    // Reset other bars to 0% width so they re-animate when clicked
-    function resetSkillBars(panel) {
-        const bars = panel.querySelectorAll('.skill-bar-inner');
-        bars.forEach(bar => {
-            bar.style.width = '0';
-        });
-    }
-
-    skillTabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetTab = btn.getAttribute('data-tab');
-            
-            skillTabBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            skillPanels.forEach(panel => {
-                if (panel.getAttribute('id') === `skills-${targetTab}`) {
-                    panel.classList.add('active');
-                    setTimeout(() => animateSkillBars(panel), 100);
-                } else {
-                    panel.classList.remove('active');
-                    resetSkillBars(panel);
-                }
-            });
-        });
-    });
-
-    // Initial load: trigger animation for the active tab (first one)
-    const initialActivePanel = document.querySelector('.skills-panel.active');
-    if (initialActivePanel) {
-        setTimeout(() => animateSkillBars(initialActivePanel), 500);
-    }
-
     // -------------------------------------------------------------
     // 6. Projects Filtering System
     // -------------------------------------------------------------
