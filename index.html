@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary SEO Meta Tags -->
+    <title>Munem Shahriar Nijhum | CSE Student & Software Developer Portfolio</title>
+    <meta name="description" content="Personal portfolio of Munem Shahriar Nijhum, Computer Science and Engineering Student at KUET. Explore academic achievements, programming projects, hardware simulations, and academic resources.">
+    <meta name="keywords" content="Munem Shahriar Nijhum, KUET CSE, Software Developer, Competitive Programming, Portfolio, Bangladesh, Kushtia, Notre Dame College">
+    <meta name="author" content="Munem Shahriar Nijhum">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Canvas for Circuit Particles -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header id="header">
+        <div class="container">
+            <a href="#home" class="logo" id="site-logo">
+                Nijhum<span>.dev</span>
+            </a>
+            
+            <button class="nav-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active"><span>01.</span>Home</a>
+                <a href="#about" class="nav-link"><span>02.</span>About</a>
+                <a href="#activities" class="nav-link"><span>03.</span>Activities</a>
+                <a href="#achievements" class="nav-link"><span>04.</span>Achievements</a>
+                <a href="#education" class="nav-link"><span>05.</span>Education</a>
+                <a href="#projects" class="nav-link"><span>06.</span>Projects</a>
+                <a href="#resources" class="nav-link"><span>07.</span>Resources</a>
+                <a href="#profile" class="nav-link"><span>08.</span>Profile</a>
+                <a href="#contact" class="nav-link"><span>09.</span>Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="home-grid">
+                <!-- Left Details -->
+                <div class="home-content">
+                    <span class="home-subtitle">Hi, my name is</span>
+                    <h1 class="home-title" id="home-main-title">Munem Shahriar Nijhum</h1>
+                    <div class="home-tagline">
+                        I'm a <span id="home-typing" style="color: var(--primary);"></span>
+                    </div>
+                    <p class="home-desc">
+                        Undergraduate Computer Science and Engineering student at Khulna University of Engineering & Technology (KUET). Passionate about software engineering, competitive programming, and digital logic design.
+                    </p>
+                    
+                    <div class="home-btns">
+                        <a href="#contact" class="btn btn-primary" id="btn-contact-me">Get In Touch</a>
+                        <a href="#projects" class="btn btn-secondary" id="btn-view-work">View Projects</a>
+                    </div>
+
+                    <!-- Short metrics dashboard -->
+                    <div class="home-metrics">
+                        <div class="metric-item">
+                            <span class="metric-value">5.00</span>
+                            <span class="metric-label">GPA (SSC/HSC/JSC)</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">12+</span>
+                            <span class="metric-label">Projects Built</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">1st</span>
+                            <span class="metric-label">JSC District Rank</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Photo Submission Frame -->
+                <div class="photo-frame-container">
+                    <div class="passport-photo-frame" id="passport-photo-frame" title="Click or Drag & Drop to submit your Passport Photo">
+                        <input type="file" id="passport-file-input" accept="image/*" aria-label="Upload passport photo">
+                        
+                        <!-- Upload Placeholder SVG/Text -->
+                        <div class="upload-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <p>Passport Size Photo</p>
+                            <span>Submit, drag & drop, or click here to upload</span>
+                        </div>
+
+                        <!-- Image Display Wrapper -->
+                        <div class="uploaded-image-wrapper" id="uploaded-image-wrapper">
+                            <img id="photo-preview" src="" alt="Submitted Passport Photo">
+                            <div class="photo-overlay">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 20h9"></path>
+                                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                                </svg>
+                                <span>Change Photo</span>
+                            </div>
+                        </div>
+
+                        <!-- Remove Button -->
+                        <button class="remove-photo-btn" id="remove-photo-btn" title="Remove Photo" aria-label="Remove photo">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px; stroke: white;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title"><span>02.</span>About Me</h2>
+            <div class="about-grid">
+                
+                <!-- Summary & Info -->
+                <div class="about-info">
+                    <p class="about-summary">
+                        I am highly motivated to explore complex technical structures, construct modular applications, and solve challenges. Having established a solid academic baseline from Notre Dame College and Kushtia Zilla School, I continue to focus on implementing efficient systems at KUET.
+                    </p>
+                    <p class="about-summary">
+                        My interests span object-oriented programming, algorithms, simulation mechanics, and hardware architecture. I thrive in collaborative environments and enjoy translating complex requirements into highly maintainable code.
+                    </p>
+
+                    <div class="personal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Location</span>
+                            <span class="detail-value">Kushtia, Khulna, BD</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Email</span>
+                            <span class="detail-value"><a href="mailto:munemshahriar526@gmail.com">munemshahriar526@gmail.com</a></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Phone</span>
+                            <span class="detail-value">01753027682</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">GitHub</span>
+                            <span class="detail-value"><a href="https://github.com/nijhum682" target="_blank" rel="noopener">github.com/nijhum682</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Interactive Panel -->
+                <div class="skills-container glass-card">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 600;">Technical Skill Matrix</h3>
+                    
+                    <div class="skills-tabs">
+                        <button class="skill-tab-btn active" data-tab="languages">Languages</button>
+                        <button class="skill-tab-btn" data-tab="web">Web Dev</button>
+                        <button class="skill-tab-btn" data-tab="tools">Tools & Tech</button>
+                        <button class="skill-tab-btn" data-tab="others">Others</button>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="skills-panel active" id="skills-languages">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">C / C++</span><span class="skill-bar-percentage">95%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="95"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">Java</span><span class="skill-bar-percentage">85%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="85"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">Python</span><span class="skill-bar-percentage">80%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="80"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">JavaScript</span><span class="skill-bar-percentage">75%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="75"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev -->
+                    <div class="skills-panel" id="skills-web">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">HTML & CSS</span><span class="skill-bar-percentage">90%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="90"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">ASP.NET</span><span class="skill-bar-percentage">75%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="75"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">PHP / Laravel</span><span class="skill-bar-percentage">70%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="70"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Tech -->
+                    <div class="skills-panel" id="skills-tools">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">Git & GitHub</span><span class="skill-bar-percentage">90%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="90"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">VS Code & IntelliJ</span><span class="skill-bar-percentage">90%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="90"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">Linux Commands</span><span class="skill-bar-percentage">80%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="80"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">Jira (Project Management)</span><span class="skill-bar-percentage">70%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="70"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Others -->
+                    <div class="skills-panel" id="skills-others">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">Data Structures & Algorithms</span><span class="skill-bar-percentage">90%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="90"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">Competitive Programming</span><span class="skill-bar-percentage">85%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="85"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-info"><span class="skill-bar-name">Object-Oriented Programming (OOP)</span><span class="skill-bar-percentage">85%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-percent="85"></div></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Activities Section -->
+    <section id="activities">
+        <div class="container">
+            <h2 class="section-title"><span>03.</span>Extra Activities</h2>
+            <div class="activities-grid">
+                
+                <div class="activity-card">
+                    <div class="activity-bullet"></div>
+                    <span class="activity-text">Member – Special Group Interested in Programming Contest (SGIPC), KUET</span>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-bullet"></div>
+                    <span class="activity-text">Member – Bit2Byte (Software Research & Development Community of KUET)</span>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-bullet"></div>
+                    <span class="activity-text">Performance Analyst & Batch Representative – Hardware Acceleration Club of KUET (HACK)</span>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-bullet"></div>
+                    <span class="activity-text">Volunteer – Bitfest (KUET CSE National Fest 2025)</span>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-bullet"></div>
+                    <span class="activity-text">Research Member – Kushtia Science Research Club (KSRC)</span>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-bullet"></div>
+                    <span class="activity-text">Host – 2nd KSRC Science Festival, Kushtia 2025</span>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-bullet"></div>
+                    <span class="activity-text">Member – Notre Dame Science Club</span>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-bullet"></div>
+                    <span class="activity-text">Member – Notre Dame Math Club</span>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-bullet"></div>
+                    <span class="activity-text">Member – Kushtia Zilla School Science Club</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Achievements Section -->
+    <section id="achievements">
+        <div class="container">
+            <h2 class="section-title"><span>04.</span>Special Achievements</h2>
+            <div class="achievements-grid">
+                
+                <!-- Achievement 1 -->
+                <div class="achievement-card glass-card">
+                    <div class="achievement-icon-wrapper">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l9-5-9-5-9 5 9 5zm0 0v6m0-6L3 9m9 5l9-5" /></svg>
+                    </div>
+                    <div class="achievement-info">
+                        <h3 class="achievement-title">Dean's Award (CSE, KUET)</h3>
+                        <p class="achievement-desc">Received the Dean's Award (up to 2nd Year) for outstanding academic performance from the Department of Computer Science and Engineering, KUET.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="achievement-card glass-card">
+                    <div class="achievement-icon-wrapper">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                    </div>
+                    <div class="achievement-info">
+                        <h3 class="achievement-title">Ranked 1st in JSC District</h3>
+                        <p class="achievement-desc">Stood First in the Junior School Certificate Examination 2017 (JSC) in Kushtia District.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="achievement-card glass-card">
+                    <div class="achievement-icon-wrapper">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <div class="achievement-info">
+                        <h3 class="achievement-title">Ranked 6th in Board (SSC 2020)</h3>
+                        <p class="achievement-desc">Stood Second in Kushtia District and Sixth (Combined Merit) in Jashore Board in the Secondary School Certificate Examination 2020 (SSC).</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 4 -->
+                <div class="achievement-card glass-card">
+                    <div class="achievement-icon-wrapper">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z" /></svg>
+                    </div>
+                    <div class="achievement-info">
+                        <h3 class="achievement-title">Science Project Divisional Champion</h3>
+                        <p class="achievement-desc">Divisional Champion in Science Project (Junior Category) hosted by Biggan Chinta, Prothom Alo at Khulna Public College (Class 9).</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 5 -->
+                <div class="achievement-card glass-card">
+                    <div class="achievement-icon-wrapper">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
+                    </div>
+                    <div class="achievement-info">
+                        <h3 class="achievement-title">Ranked 87th NDC Sent-Up</h3>
+                        <p class="achievement-desc">Ranked 87th (Top 100) out of 2,000 students in Science Group in Sent-Up Exam at Notre Dame College, Dhaka.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 6 -->
+                <div class="achievement-card glass-card">
+                    <div class="achievement-icon-wrapper">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    </div>
+                    <div class="achievement-info">
+                        <h3 class="achievement-title">PEC Exam 2nd in Upazilla</h3>
+                        <p class="achievement-desc">Stood Second in Primary Education Completion Examination 2014 (PEC) in Kushtia Sadar Upazilla, Kushtia.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 7 -->
+                <div class="achievement-card glass-card">
+                    <div class="achievement-icon-wrapper">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+                    </div>
+                    <div class="achievement-info">
+                        <h3 class="achievement-title">Academic First (Class 6 - 10)</h3>
+                        <p class="achievement-desc">Ranked First among four sections of Kushtia Zilla School from Class 6 to Class 10.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title"><span>05.</span>My Education</h2>
+            
+            <div class="timeline">
+                
+                <!-- KUET -->
+                <div class="timeline-item">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2023 - 2027 (Expected)</span>
+                        <h3 class="timeline-title">BSc in Engineering</h3>
+                        <p class="timeline-dept">Computer Science and Engineering</p>
+                        <p class="timeline-inst">Khulna University of Engineering & Technology (KUET)</p>
+                        <span class="scholarship-tag">Dean's List Awardee</span>
+                    </div>
+                </div>
+
+                <!-- Notre Dame College -->
+                <div class="timeline-item">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2020 - 2022</span>
+                        <h3 class="timeline-title">Higher Secondary Certificate (HSC)</h3>
+                        <p class="timeline-inst">Notre Dame College, Dhaka</p>
+                        <p class="timeline-result">Result: GPA 5.00 (General Scholarship)</p>
+                        <span class="scholarship-tag">General Scholarship</span>
+                    </div>
+                </div>
+
+                <!-- SSC -->
+                <div class="timeline-item">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2018 - 2020</span>
+                        <h3 class="timeline-title">Secondary School Certificate (SSC)</h3>
+                        <p class="timeline-inst">Kushtia Zilla School, Kushtia</p>
+                        <p class="timeline-result">Result: GPA 5.00 (Talentpool Scholarship)</p>
+                        <span class="scholarship-tag">Board Talentpool Scholarship</span>
+                    </div>
+                </div>
+
+                <!-- JSC -->
+                <div class="timeline-item">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2015 - 2017</span>
+                        <h3 class="timeline-title">Junior School Certificate (JSC)</h3>
+                        <p class="timeline-inst">Kushtia Zilla School, Kushtia</p>
+                        <p class="timeline-result">Result: GPA 5.00 (Talentpool Scholarship)</p>
+                        <span class="scholarship-tag">District Talentpool Scholarship</span>
+                    </div>
+                </div>
+
+                <!-- PEC -->
+                <div class="timeline-item">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2014</span>
+                        <h3 class="timeline-title">Primary Education Completion (PEC)</h3>
+                        <p class="timeline-inst">Kushtia Zilla School, Kushtia</p>
+                        <p class="timeline-result">Result: GPA 5.00 (Talentpool Scholarship)</p>
+                        <span class="scholarship-tag">Sadar Upazilla 2nd Place</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Projects Section -->
+    <section id="projects">
+        <div class="container">
+            
+            <div class="projects-header">
+                <div>
+                    <h2 class="section-title" style="margin-bottom: 0.5rem;"><span>06.</span>Projects Showcase</h2>
+                    <p style="color: var(--text-muted);">A curated selection of software, hardware, and simulation work.</p>
+                </div>
+                <div class="projects-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="software">Software</button>
+                    <button class="filter-btn" data-filter="hardware">Hardware</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Project 1: 5-Storey Lift Circuit Design -->
+                <div class="project-card glass-card hardware">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nijhum682/Lift-circuit-designed-by-logisim" target="_blank" rel="noopener" aria-label="GitHub Link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">5-Storey Lift Circuit</h3>
+                    <p class="project-desc">Develop a Logisim-based counter circuit that accepts floor inputs (0 to 4) and displays intermediate states on a 7-segment display when moving between floors.</p>
+                    <div class="project-tech">
+                        <span>Logisim</span>
+                        <span>Logic Gates</span>
+                        <span>7-Segment</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: 7-Segment Display Design -->
+                <div class="project-card glass-card hardware">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nijhum682/Design-of-a-7-segment-display" target="_blank" rel="noopener" aria-label="GitHub Link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">7-Segment Logic Design</h3>
+                    <p class="project-desc">Logisim simulated display driver circuitry displaying corresponding decimal digits (0–9) based on binary input combinations (000–111).</p>
+                    <div class="project-tech">
+                        <span>Logisim</span>
+                        <span>Karnaugh Maps</span>
+                        <span>Circuits</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: FoodBike (Android) -->
+                <div class="project-card glass-card software">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nijhum682/FoodBikeAndroid" target="_blank" rel="noopener" aria-label="GitHub Link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">FoodBike Android</h3>
+                    <p class="project-desc">Java-based mobile food delivery system application. Includes complex order pipelines, review panels, return handling, and input validation.</p>
+                    <div class="project-tech">
+                        <span>Android</span>
+                        <span>Java</span>
+                        <span>Mobile App</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: FoodBike (Desktop) -->
+                <div class="project-card glass-card software">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nijhum682/FoodBike" target="_blank" rel="noopener" aria-label="GitHub Link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">FoodBike Desktop</h3>
+                    <p class="project-desc">Java Swing desktop version of the FoodBike online food ordering system, featuring local database management and order monitoring.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Swing</span>
+                        <span>Desktop UI</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: CV Builder -->
+                <div class="project-card glass-card software">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nijhum682/Nijhum_2207111_CVBuilder" target="_blank" rel="noopener" aria-label="GitHub Link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Java CV Builder</h3>
+                    <p class="project-desc">A graphical application designed to collect user metadata, images, and credentials to compile formatted CV templates automatically.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>IntelliJ</span>
+                        <span>File I/O</span>
+                    </div>
+                </div>
+
+                <!-- Project 6: KUET CSE-22 Telegram Bot -->
+                <div class="project-card glass-card software">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nijhum682/CSE-22-Bot" target="_blank" rel="noopener" aria-label="GitHub Link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">KUET CSE-22 Bot</h3>
+                    <p class="project-desc">A Python Telegram bot deployed on Vercel. Indexes routines, term questions, syllabi, class resources, and off-topic Wikipedia queries using NLP.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Telegram API</span>
+                        <span>Vercel</span>
+                    </div>
+                </div>
+
+                <!-- Project 7: HACK Portfolio Website -->
+                <div class="project-card glass-card web">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nijhum682/HACK-Portfolio" target="_blank" rel="noopener" aria-label="GitHub Link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">HACK Portfolio Site</h3>
+                    <p class="project-desc">HTML and ASP.NET portfolio site built for Hardware Acceleration Club of KUET (HACK). Features themed backgrounds and profiles.</p>
+                    <div class="project-tech">
+                        <span>ASP.NET</span>
+                        <span>HTML & CSS</span>
+                        <span>Animation</span>
+                    </div>
+                </div>
+
+                <!-- Project 8: 20-Bit Mini Computer -->
+                <div class="project-card glass-card hardware software">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nijhum682/20-bit-mini-computer" target="_blank" rel="noopener" aria-label="GitHub Link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">20-Bit Mini Computer</h3>
+                    <p class="project-desc">Simulated computer design using PC, registers, RAM, Booth's multiplier, ALU, and standard fetch-decode-execute Control Unit cycles.</p>
+                    <div class="project-tech">
+                        <span>Logisim</span>
+                        <span>ALU</span>
+                        <span>Instruction Set</span>
+                    </div>
+                </div>
+
+                <!-- Project 9: Numerical Calculator -->
+                <div class="project-card glass-card software">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Tahmid2K22/Numerical-Calculator" target="_blank" rel="noopener" aria-label="GitHub Link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Numerical Calculator</h3>
+                    <p class="project-desc">C++ modular solver package covering roots, interpolations, approximations, and equation integration with step-by-step algorithms.</p>
+                    <div class="project-tech">
+                        <span>C++</span>
+                        <span>Numerical Methods</span>
+                        <span>Algorithms</span>
+                    </div>
+                </div>
+
+                <!-- Project 10: Wokwi WiFi 7-Segment -->
+                <div class="project-card glass-card hardware">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nijhum682/WiFi-Controlled-7-Segment-Display" target="_blank" rel="noopener" aria-label="GitHub Link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">WiFi 7-Segment IoT</h3>
+                    <p class="project-desc">Wokwi ESP32 simulated IoT system receiving numbers (0-9) via Blynk Cloud channels and showing digits on hardware displays.</p>
+                    <div class="project-tech">
+                        <span>ESP32</span>
+                        <span>IoT Blynk</span>
+                        <span>Wokwi</span>
+                    </div>
+                </div>
+
+                <!-- Project 11: Hardware Circuits -->
+                <div class="project-card glass-card hardware">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                        </div>
+                        <div class="project-links">
+                            <!-- No Github link supplied, can keep empty -->
+                        </div>
+                    </div>
+                    <h3 class="project-title">Physical Circuit Builds</h3>
+                    <p class="project-desc">Physical breadboard circuits: NAND/NOR gates via resistor-transistor logic, Relay integrations using Arduino Uno, and fully functional Autonomous Car.</p>
+                    <div class="project-tech">
+                        <span>Breadboard</span>
+                        <span>ICs</span>
+                        <span>Arduino Uno</span>
+                    </div>
+                </div>
+
+                <!-- Project 12: Self-Portfolio -->
+                <div class="project-card glass-card web">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nijhum682/my_portfolio" target="_blank" rel="noopener" aria-label="GitHub Link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Self-Portfolio Page</h3>
+                    <p class="project-desc">Personal premium cyber-blue themed portfolio with floating particles background, passport image upload feature, and resource finders.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>Vanilla CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Resources Section -->
+    <section id="resources">
+        <div class="container">
+            <h2 class="section-title"><span>07.</span>Academic Resources</h2>
+            <div class="resources-grid">
+                
+                <!-- Telegram Bot Simulation Description -->
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <h3 style="font-size: 1.6rem; font-weight: 700; color: var(--text-primary);">KUET CSE-22 Resource Hub</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">
+                        Based on the Python-based Telegram Bot project deployed to host class resources for the CSE-22 batch. This interactive terminal connects you to syllabi, Class Tests (CT) questions, routines, batch details, and project archives.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">
+                        Simply use the search utility in the bot UI to query any specific resource (e.g. <i>"questions"</i>, <i>"routine"</i>, <i>"lift circuit"</i>, <i>"syllabus"</i>) to filter files dynamically. Clicking on a resource's download icon simulates file processing.
+                    </p>
+
+                    <div style="margin-top: 1rem; padding: 1.25rem; background: rgba(5, 11, 26, 0.4); border-left: 3px solid var(--accent); border-radius: 4px;">
+                        <span style="font-family: var(--font-mono); color: var(--accent); font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.5rem;">PROTIP</span>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">The actual bot supports natural language queries (built with Wikipedia extensions) and is hosted 24/7 on Vercel servers.</p>
+                    </div>
+                </div>
+
+                <!-- Telegram Widget UI -->
+                <div class="telegram-widget">
+                    
+                    <!-- Bot Header -->
+                    <div class="tg-header">
+                        <div class="tg-avatar">Bot</div>
+                        <div class="tg-info">
+                            <h4>KUET CSE-22 Batch Bot</h4>
+                            <p>online | academic resource indexer</p>
+                        </div>
+                    </div>
+
+                    <!-- Bot Chat Log -->
+                    <div class="tg-body" id="telegram-chat-body">
+                        <div class="tg-msg">
+                            <div class="tg-msg-avatar">Bot</div>
+                            <div class="tg-bubble">
+                                <p>Welcome to the CSE-22 batch resources bot. Ask me for routines, term sheets, or course files.</p>
+                                <span>11:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Search Console inside bot -->
+                    <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-color); background: rgba(10, 25, 47, 0.5);">
+                        <div class="tg-search-bar">
+                            <input type="text" id="resource-search-input" placeholder="Search bot database (e.g., 'questions')...">
+                            <button id="resource-search-btn" aria-label="Search resources">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            </button>
+                        </div>
+
+                        <!-- Mini Resources List Output -->
+                        <div class="resource-list" id="resources-list-items">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Profile Section -->
+    <section id="profile">
+        <div class="container">
+            <h2 class="section-title"><span>08.</span>Technical Profile</h2>
+            <div class="profile-grid">
+                
+                <!-- Profile details -->
+                <div class="profile-card glass-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar">MS</div>
+                        <div class="profile-meta">
+                            <h3>Munem Shahriar</h3>
+                            <p>github.com/nijhum682</p>
+                        </div>
+                    </div>
+                    <div class="profile-body">
+                        <p>
+                            As a Computer Science student at KUET, my coding profile revolves around writing modular desktop programs in Java, configuring simulated microcontroller chips and logic processors, and solving algorithms.
+                        </p>
+                        <p>
+                            Through rigorous study of algorithms and data structures, I've designed complete computer instruction cycles (fetch-decode-execute in Logisim) and built functional IoT systems linked with cloud environments.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Showcase Metrics -->
+                <div class="stat-showcase">
+                    <div class="stat-card glass-card">
+                        <span class="stat-num">5 / 5</span>
+                        <span class="stat-desc">Lift Floors Simulated</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-num">20-Bit</span>
+                        <span class="stat-desc">CPU Architecture Designed</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-desc">Academic Results (GPA 5.0)</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-desc">Vercel Bot Uptime</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title"><span>09.</span>Contact Me</h2>
+            
+            <div class="contact-grid">
+                
+                <!-- Left contact options -->
+                <div class="contact-info">
+                    
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div class="contact-card-details">
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:munemshahriar526@gmail.com">munemshahriar526@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class="contact-card-details">
+                            <h4>Phone Line</h4>
+                            <p>+8801753027682</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="contact-card-details">
+                            <h4>Location</h4>
+                            <p>Kushtia, Khulna, Bangladesh</p>
+                        </div>
+                    </div>
+
+                    <!-- Simulated Blueprint Map -->
+                    <div class="map-simulation">
+                        <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 40 C 80 50, 120 20, 180 80 C 240 140, 290 80, 380 120" stroke="rgba(59, 130, 246, 0.4)" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <path d="M50 160 C 130 110, 190 190, 260 110 C 310 50, 340 140, 390 60" stroke="rgba(59, 130, 246, 0.3)" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <circle cx="180" cy="80" r="6" fill="rgba(0, 210, 255, 0.2)"/>
+                            <circle cx="260" cy="110" r="10" fill="rgba(0, 210, 255, 0.1)"/>
+                        </svg>
+                        <div class="map-overlay">
+                            <div class="map-marker"></div>
+                            <div class="map-location-text">Kushtia</div>
+                            <div class="map-location-sub">Khulna Division, Bangladesh</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contact Form right side -->
+                <div class="glass-card">
+                    <form class="contact-form" id="portfolio-contact-form" novalidate>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" class="form-control" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" class="form-control" placeholder="Your email address" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" class="form-control" placeholder="Message topic" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" class="form-control" placeholder="Write your message details..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="align-self: flex-start; margin-top: 0.5rem;">Transmit Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <!-- GitHub -->
+                    <a href="https://github.com/nijhum682" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com/in/munem-shahriar-nijhum-8a3249394" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:munemshahriar526@gmail.com" class="social-link" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                </div>
+                
+                <p class="footer-text">
+                    Designed & Built by <span>Munem Shahriar Nijhum</span> &copy; 2026. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" onclick="scrollToTop()" title="Scroll to Top" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
