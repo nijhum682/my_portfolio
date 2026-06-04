@@ -36,10 +36,10 @@
                 <a href="#achievements" class="nav-link"><span>04.</span>Achievements</a>
                 <a href="#education" class="nav-link"><span>05.</span>Education</a>
                 <a href="#projects" class="nav-link"><span>06.</span>Projects</a>
-                <a href="#resources" class="nav-link"><span>07.</span>Resources</a>
+                <a href="#institution" class="nav-link"><span>07.</span>Institution</a>
                 <a href="#profile" class="nav-link"><span>08.</span>Profile</a>
                 <a href="#contact" class="nav-link"><span>09.</span>Contact</a>
-                <a href="CV_Munem_Shahriar_Nijhum.pdf" class="nav-link" download="CV_Munem_Shahriar_Nijhum"><span>10.</span>Download CV</a>
+                <a href="#download-cv-section" class="nav-link"><span>10.</span>Download CV</a>
             </nav>
         </div>
     </header>
@@ -739,66 +739,66 @@
         </div>
     </section>
 
-    <!-- 7. Resources Section -->
-    <section id="resources">
+    <!-- 7. Institution Section -->
+    <section id="institution">
         <div class="container">
-            <h2 class="section-title"><span>07.</span>Academic Resources</h2>
-            <div class="resources-grid">
+            <h2 class="section-title"><span>07.</span>My Institutions</h2>
+            
+            <div class="timeline">
                 
-                <!-- Telegram Bot Simulation Description -->
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <h3 style="font-size: 1.6rem; font-weight: 700; color: var(--text-primary);">KUET CSE-22 Resource Hub</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">
-                        Based on the Python-based Telegram Bot project deployed to host class resources for the CSE-22 batch. This interactive terminal connects you to syllabi, Class Tests (CT) questions, routines, batch details, and project archives.
-                    </p>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">
-                        Simply use the search utility in the bot UI to query any specific resource (e.g. <i>"questions"</i>, <i>"routine"</i>, <i>"lift circuit"</i>, <i>"syllabus"</i>) to filter files dynamically. Clicking on a resource's download icon simulates file processing.
-                    </p>
-
-                    <div style="margin-top: 1rem; padding: 1.25rem; background: rgba(5, 11, 26, 0.4); border-left: 3px solid var(--accent); border-radius: 4px;">
-                        <span style="font-family: var(--font-mono); color: var(--accent); font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.5rem;">PROTIP</span>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">The actual bot supports natural language queries (built with Wikipedia extensions) and is hosted 24/7 on Vercel servers.</p>
+                <!-- KUET -->
+                <div class="timeline-item">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2023 - 2027</span>
+                        <h3 class="timeline-title">Bsc. Engineering in CSE</h3>
+                        <p class="timeline-dept">First year to Fourth Year</p>
+                        <p class="timeline-inst">Khulna University of Engineering & Technology, Khulna</p>
                     </div>
                 </div>
 
-                <!-- Telegram Widget UI -->
-                <div class="telegram-widget">
-                    
-                    <!-- Bot Header -->
-                    <div class="tg-header">
-                        <div class="tg-avatar">Bot</div>
-                        <div class="tg-info">
-                            <h4>KUET CSE-22 Batch Bot</h4>
-                            <p>online | academic resource indexer</p>
-                        </div>
+                <!-- Notre Dame College -->
+                <div class="timeline-item">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2020 - 2022</span>
+                        <h3 class="timeline-title">Higher Secondary</h3>
+                        <p class="timeline-dept">Class Eleven to Class Twelve</p>
+                        <p class="timeline-inst">Notre Dame College, Dhaka</p>
                     </div>
+                </div>
 
-                    <!-- Bot Chat Log -->
-                    <div class="tg-body" id="telegram-chat-body">
-                        <div class="tg-msg">
-                            <div class="tg-msg-avatar">Bot</div>
-                            <div class="tg-bubble">
-                                <p>Welcome to the CSE-22 batch resources bot. Ask me for routines, term sheets, or course files.</p>
-                                <span>11:30 PM</span>
-                            </div>
-                        </div>
+                <!-- Secondary -->
+                <div class="timeline-item">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2015 - 2020</span>
+                        <h3 class="timeline-title">Secondary</h3>
+                        <p class="timeline-dept">Class Six to Class Ten</p>
+                        <p class="timeline-inst">Kushtia Zilla School, Kushtia</p>
                     </div>
+                </div>
 
-                    <!-- Search Console inside bot -->
-                    <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-color); background: rgba(10, 25, 47, 0.5);">
-                        <div class="tg-search-bar">
-                            <input type="text" id="resource-search-input" placeholder="Search bot database (e.g., 'questions')...">
-                            <button id="resource-search-btn" aria-label="Search resources">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                            </button>
-                        </div>
-
-                        <!-- Mini Resources List Output -->
-                        <div class="resource-list" id="resources-list-items">
-                            <!-- Populated dynamically via JS -->
-                        </div>
+                <!-- Primary -->
+                <div class="timeline-item">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2012 - 2014</span>
+                        <h3 class="timeline-title">Primary</h3>
+                        <p class="timeline-dept">Class Three to Class Five</p>
+                        <p class="timeline-inst">Kushtia Zilla School, Kushtia</p>
                     </div>
+                </div>
 
+                <!-- Pre-primary -->
+                <div class="timeline-item">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2009 - 2012</span>
+                        <h3 class="timeline-title">Pre-primary</h3>
+                        <p class="timeline-dept">Class Play to Class Two</p>
+                        <p class="timeline-inst">Protiva Pre-Cadet Academy, Harinarayanpur, Kushtia Sadar, Kushtia</p>
+                    </div>
                 </div>
 
             </div>
@@ -942,11 +942,16 @@
 
             </div>
 
-            <!-- Dedicated CV Download Segment -->
-            <div class="cv-download-segment glass-card" style="margin-top: 4rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 2.5rem 2rem;">
-                <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">Curriculum Vitae</h3>
-                <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 600px;">You can download my PDF Version of CV from here:</p>
-                <a href="CV_Munem_Shahriar_Nijhum.pdf" class="btn btn-primary" download="CV_Munem_Shahriar_Nijhum" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">
+        </div>
+    </section>
+
+    <!-- Dedicated CV Download Segment -->
+    <section id="download-cv-section">
+        <div class="container">
+            <h2 class="section-title"><span>10.</span>Curriculum Vitae</h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                <p style="font-size: 1.05rem; color: var(--text-secondary);">You can download my PDF Version of CV from here:</p>
+                <a href="CV_Munem_Shahriar_Nijhum.pdf" class="btn btn-primary" download="CV_Munem_Shahriar_Nijhum" style="display: inline-flex; align-items: center; gap: 0.5rem; align-self: flex-start;">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke: #000;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                     Download CV
                 </a>
@@ -958,14 +963,23 @@
     <footer>
         <div class="container">
             <div class="footer-content">
+                <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; letter-spacing: 0.5px;">Stay Connected</p>
                 <div class="social-links">
-                    <!-- GitHub -->
-                    <a href="https://github.com/nijhum682" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/munemshahriar.nijhum?mibextid=ZbWKwL" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/nijhum_once_again?igsh=cHFoNDA1NnI4YnF0" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                     </a>
                     <!-- LinkedIn -->
                     <a href="https://linkedin.com/in/munem-shahriar-nijhum-8a3249394" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/nijhum682" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                     </a>
                     <!-- Email -->
                     <a href="mailto:munemshahriar526@gmail.com" class="social-link" aria-label="Email">
