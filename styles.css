@@ -104,17 +104,7 @@ section {
     display: inline-block;
     color: var(--text-primary);
     letter-spacing: -0.5px;
-}
-
-/* Blinking Terminal Cursor */
-.section-title::before {
-    content: '_';
-    position: absolute;
-    bottom: 0;
-    right: -18px;
-    color: var(--primary);
-    animation: cursorBlink 0.8s step-end infinite;
-    text-shadow: 0 0 8px var(--primary);
+    animation: titleBlink 0.4s ease-in-out infinite alternate;
 }
 
 .section-title::after {
@@ -137,23 +127,17 @@ section {
     font-weight: 500;
     display: block;
     margin-bottom: 0.5rem;
-    animation: accentFlicker 4s infinite;
 }
 
 /* Animations */
-@keyframes cursorBlink {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
-}
-
-@keyframes accentFlicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
-        text-shadow: 0 0 8px rgba(100, 255, 218, 0.6);
+@keyframes titleBlink {
+    0% {
+        color: rgba(248, 250, 252, 1);
+        text-shadow: 0 0 8px rgba(248, 250, 252, 0.25);
     }
-    20%, 24%, 55% {
-        opacity: 0.35;
-        text-shadow: none;
+    100% {
+        color: rgba(248, 250, 252, 0.7);
+        text-shadow: 0 0 2px rgba(248, 250, 252, 0.05);
     }
 }
 
