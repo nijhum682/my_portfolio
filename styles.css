@@ -752,7 +752,7 @@ header .container {
 /* Achievements Grid */
 .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -945,7 +945,7 @@ header .container {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -1409,5 +1409,76 @@ footer {
     
     .form-row {
         grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .projects-header {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .projects-filters {
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .home-title {
+        font-size: 2.2rem;
+    }
+
+    .home-tagline {
+        font-size: 1.2rem;
+        min-height: auto;
+    }
+
+    .home-desc {
+        font-size: 0.95rem;
+    }
+
+    .home-btns {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .home-btns .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home-metrics {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 3.5rem;
+    }
+
+    .timeline-badge {
+        left: 11px !important;
     }
 }
