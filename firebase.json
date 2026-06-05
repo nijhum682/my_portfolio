@@ -1,0 +1,35 @@
+{
+  "hosting": {
+    "site": "munem-portfolio-526",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "firebase.exe",
+      "**/.*",
+      "**/node_modules/**",
+      ".git/**",
+      ".vs/**",
+      "web.config"
+    ],
+    "headers": [
+      {
+        "source": "**/*.circ",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ]
+      },
+      {
+        "source": "**/index.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      }
+    ]
+  }
+}
