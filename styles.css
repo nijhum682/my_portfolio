@@ -106,6 +106,17 @@ section {
     letter-spacing: -0.5px;
 }
 
+/* Blinking Terminal Cursor */
+.section-title::before {
+    content: '_';
+    position: absolute;
+    bottom: 0;
+    right: -18px;
+    color: var(--primary);
+    animation: cursorBlink 0.8s step-end infinite;
+    text-shadow: 0 0 8px var(--primary);
+}
+
 .section-title::after {
     content: '';
     position: absolute;
@@ -118,6 +129,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
 }
 
+/* Pulsing Accent Number */
 .section-title span {
     font-family: var(--font-mono);
     color: var(--accent);
@@ -125,6 +137,24 @@ section {
     font-weight: 500;
     display: block;
     margin-bottom: 0.5rem;
+    animation: accentFlicker 4s infinite;
+}
+
+/* Animations */
+@keyframes cursorBlink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes accentFlicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 8px rgba(100, 255, 218, 0.6);
+    }
+    20%, 24%, 55% {
+        opacity: 0.35;
+        text-shadow: none;
+    }
 }
 
 /* Glass Card Helper */
