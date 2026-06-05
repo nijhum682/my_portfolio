@@ -416,30 +416,57 @@ document.addEventListener('DOMContentLoaded', () => {
             const subject = document.getElementById('contact-subject').value.trim();
             const message = document.getElementById('contact-message').value.trim();
 
-            if (!name || !email || !subject || !message) {
+            // Validate email exists and is valid format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) {
+                alert("Please provide a valid email address!");
+                return;
+            }
+
+            // Validate other fields
+            if (!name || !subject || !message) {
                 showToast('All form fields are required.', 'error');
                 return;
             }
 
-            // Simple Email Regex
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                showToast('Please enter a valid email address.', 'error');
-                return;
-            }
-
-            // Simulate sending message
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.textContent;
             submitBtn.textContent = 'Transmission in progress...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
+            // Submit using FormSubmit AJAX endpoint
+            fetch("https://formsubmit.co/ajax/munemshahriar526@gmail.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    _subject: `New Portfolio Message: ${subject}`,
+                    message: message
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Failed to transmit message.');
+                }
+            })
+            .then(data => {
                 showToast(`Transmission complete. Thank you ${name}!`, 'success');
                 contactForm.reset();
+            })
+            .catch(error => {
+                console.error("FormSubmit Error:", error);
+                showToast('Failed to transmit message. Please try again later.', 'error');
+            })
+            .finally(() => {
                 submitBtn.textContent = originalBtnText;
                 submitBtn.disabled = false;
-            }, 1500);
+            });
         });
     }
 
