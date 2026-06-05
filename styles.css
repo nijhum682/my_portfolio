@@ -56,12 +56,16 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--bg-darker);
     color: var(--text-primary);
     font-family: var(--font-heading);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 canvas#bg-canvas {
@@ -360,6 +364,7 @@ header .container {
 /* Home Stats/Metrics Dashboard */
 .home-metrics {
     display: flex;
+    flex-wrap: wrap;
     gap: 2.5rem;
     margin-top: 2rem;
     padding-top: 2rem;
@@ -1293,12 +1298,12 @@ footer {
     }
 
     .projects-header {
-        text-align: center;
-        justify-content: center;
+        text-align: left;
+        justify-content: flex-start;
     }
 
     .projects-filters {
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
         flex-wrap: wrap;
     }
