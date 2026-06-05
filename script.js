@@ -237,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
+    // -------------------------------------------------------------
     // 4. Passport Photo Upload & LocalStorage Persistence
     // -------------------------------------------------------------
     const photoFrame = document.getElementById('passport-photo-frame');
@@ -244,6 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageWrapper = document.getElementById('uploaded-image-wrapper');
     const previewImg = document.getElementById('photo-preview');
     const removeBtn = document.getElementById('remove-photo-btn');
+    const interactiveWrapper = document.getElementById('interactive-frame-wrapper');
 
     // Check if photo exists in LocalStorage
     const storedPhoto = localStorage.getItem('passport_photo');
@@ -306,6 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
             photoFrame.addEventListener(eventName, (e) => {
                 e.preventDefault();
                 photoFrame.classList.add('dragover');
+                if (interactiveWrapper) interactiveWrapper.classList.add('dragover');
             }, false);
         });
 
@@ -313,6 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
             photoFrame.addEventListener(eventName, (e) => {
                 e.preventDefault();
                 photoFrame.classList.remove('dragover');
+                if (interactiveWrapper) interactiveWrapper.classList.remove('dragover');
             }, false);
         });
 
@@ -334,6 +338,37 @@ document.addEventListener('DOMContentLoaded', () => {
             previewImg.src = '';
             if (fileInput) fileInput.value = '';
             showToast('Passport photo removed.', 'success');
+        });
+    }
+
+    // -------------------------------------------------------------
+    // 5. Interactive Photo Frame (3D Tilt & Cursor Glow Tracking)
+    // -------------------------------------------------------------
+    if (interactiveWrapper) {
+        interactiveWrapper.addEventListener('mousemove', (e) => {
+            const rect = interactiveWrapper.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const pctX = (x / rect.width * 100).toFixed(2) + '%';
+            const pctY = (y / rect.height * 100).toFixed(2) + '%';
+            
+            // Calculate tilt: max tilt angle is 12 degrees
+            const maxTilt = 12;
+            const tiltX = (-(y / rect.height - 0.5) * maxTilt).toFixed(2) + 'deg';
+            const tiltY = ((x / rect.width - 0.5) * maxTilt).toFixed(2) + 'deg';
+            
+            interactiveWrapper.style.setProperty('--mouse-x', pctX);
+            interactiveWrapper.style.setProperty('--mouse-y', pctY);
+            interactiveWrapper.style.setProperty('--tilt-x', tiltX);
+            interactiveWrapper.style.setProperty('--tilt-y', tiltY);
+        });
+        
+        interactiveWrapper.addEventListener('mouseleave', () => {
+            interactiveWrapper.style.setProperty('--mouse-x', '50%');
+            interactiveWrapper.style.setProperty('--mouse-y', '50%');
+            interactiveWrapper.style.setProperty('--tilt-x', '0deg');
+            interactiveWrapper.style.setProperty('--tilt-y', '0deg');
         });
     }
 
