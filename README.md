@@ -37,6 +37,7 @@ I am a Computer Science and Engineering (CSE) student at **Khulna University of 
 ---
 
 ## 🏆 Academic Achievements
+*   **CR Appreciation Certificate:** Serving as a Class Representative of CSE-2k22 for two consecutive semesters 2-2 & 3-1, achieved CR Appreciation Certificate from Department of Computer Science and Engineering, KUET.
 *   **Dean's Award (CSE, KUET):** Received for outstanding academic performance up to the 2nd Year.
 *   **Board General Scholarship (HSC 2022):** Notre Dame College, Dhaka. Ranked 87th (Top 100) out of 2,000 science students in Sent-Up Exams.
 *   **Board Talentpool Scholarship (SSC 2020):** Stood 6th in Combined Merit under Jashore Board and 2nd in Kushtia District.
@@ -60,6 +61,8 @@ I am a Computer Science and Engineering (CSE) student at **Khulna University of 
     *   A Logisim-simulated driver circuitry displaying decimal digits (0–9) using Karnaugh maps and basic logic gates.
 5.  **Physical Circuit Builds** (Arduino / Breadboard)
     *   Breadboard-implemented NAND/NOR logic gates using RTL and DTL, relay integrations using Arduino Uno, and a fully functional autonomous car embedded system.
+6.  **[IoT Based Automated Toll & Traffic Management System](https://github.com/Tamal-Ghosh/Automated-Toll-and-Traffic-Control-System-)** (ESP32 / ESP32-CAM / IoT)
+    *   An IoT system integrating automated toll collection and smart traffic light controllers using ESP32, ESP32-CAM, and web dashboard integration for real-time traffic monitoring.
 
 ### 📱 Software & Web Projects
 1.  **[KUET CSE-22 Telegram Bot](https://github.com/nijhum682/CSE-22-Bot)** (Python / Vercel / Telegram API)
@@ -74,6 +77,12 @@ I am a Computer Science and Engineering (CSE) student at **Khulna University of 
     *   A command-line solver package covering root-finding algorithms, interpolation, curve approximations, and numerical integration.
 6.  **[HACK Portfolio Website](https://github.com/nijhum682/HACK-Portfolio)** (ASP.NET / HTML & CSS)
     *   A themed portal site developed for the Hardware Acceleration Club of KUET (HACK).
+7.  **[EduTrack - Online Learning Platform](https://github.com/nijhum682/EduTrack)** (Laravel / PHP / MySQL / Tailwind CSS v4 / OpenAI API)
+    *   A feature-rich Learning Management System (LMS) with a central workspace for lectures and assignments, peer note exchange, smart Q&A, live classrooms, and an OpenAI-powered virtual tutor.
+8.  **[CaseFlowX - Digital Police Case Management System](https://github.com/Tahmid2K22/CaseFlowX-Digital-Police-Case-Management-System)** (PHP / MySQL / HTML & CSS)
+    *   A Digital Police Case Management System featuring user authentication, FIR and case file management, investigation tracking with a Scrum task board, evidence database, and an analytics dashboard.
+9.  **[Travello - Online Bus Ticketing System](https://github.com/nijhum682/Bus-Ticketing-System)** (ASP.NET Core / C# / Oracle Database)
+    *   An online bus ticketing system featuring bus scheduling, route management, seat reservation, and ticket booking.
 
 ---
 

@@ -272,6 +272,7 @@ header .container {
     min-height: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding-top: calc(var(--nav-height) + 50px);
     padding-bottom: 90px;
 }
@@ -1207,10 +1208,12 @@ footer {
         grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
+        justify-items: center;
     }
     
     .home-content {
         align-items: center;
+        width: 100%;
     }
     
     .home-desc {
@@ -1223,6 +1226,8 @@ footer {
     
     .photo-frame-container {
         order: -1;
+        width: 100%;
+        justify-content: center;
     }
     
     .about-grid, .contact-grid {
